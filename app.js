@@ -13,20 +13,18 @@ const server = http.createServer(function(req, res){
     let name = origin.query.name;
 
     if (path.toLowerCase() === '/hello') {
-        let message = "Hello!"
+        let message = "Hello!";
 
         if (name != undefined){
-            name = name.replace(/\"/g,'');
-            message = `Hi, ${name}! How are you?`
+            message = `Hi, ${name}! How are you?`;
         }
+        res.setHeader('content-type', "application/json");
         res.writeHead(200);
-        res.end(message);
+        res.end(`{"message": "${message}"}`);
     } else {
         res.writeHead(404);
         res.end();
     }
-
-    res.end("Hello World.")
 });
 
 server.listen(3000);
