@@ -1,6 +1,9 @@
-# PHW1-API
-Pirple Assignment 1
+# Pirple Assignment 1
 
+<b>This is a RESTful JSON API as per the instructions provided.</b><br/>
 
-url.tld/hello --> Hello! <br/>
-url.tld/hello?name="Dhruv" --> Hello, Dhruv! How are you?
+Usage Examples:<br/>
+
+<br/>url.tld:3000/hello will return {"message": "Hello!"}<br/>
+
+<br/>url.tld/hello?name=Dhruv will return {"message": "Hello, Dhruv! How are you?"}<br/>
